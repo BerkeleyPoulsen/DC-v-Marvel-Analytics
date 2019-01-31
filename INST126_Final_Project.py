@@ -24,16 +24,9 @@ print(
 "    ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚═════╝  ╚═════╝      ╚═══╝      ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝    ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝\n")
 start()
 
-#Used for testing
-#START Test BLOCK
-#END Test BLOCK
-
 #This is the general statistics function, defined using ("general") in the console.
 def general():
 
-    # Code Berkeley Poulsen Start
-
-    # Start General
     movie_amt_DC = len(data.loc[(data["Studio"] == "DC")])
     gross_income_DC = data.loc[(data["Studio"] == "DC")]
 
@@ -57,11 +50,6 @@ def general():
     CleanDifference = "{:,}".format(Difference)
     print("The difference of the two studios international revenue is about, $", CleanDifference, " on average, with DC making more on average \n")
 
-    # Code Berkeley Poulsen End
-
-    # Code Costa Borsas Start
-
-    # This is simply the row amount, and not much more
     print(">>> STATISTICS ABOUT THE AMOUNT OF MOVIES <<<")
     print("Marvel has made", movie_amt_MV, "Movies total")
     print("DC has made", movie_amt_DC, "Movies total")
@@ -78,12 +66,6 @@ def general():
     print("The average Review score for a Marvel movie is:", MVratings,"\n")
 
     start()
-
-    # Code Costa Borsas End
-
-    # End General
-
-# Code made by Berkeley Poulsen Start
 
 def advance():
     search = (input("\n This is the advanced terminal; \n Type in a movie to view its statistics \n\n >: ").lower())
@@ -143,11 +125,7 @@ def advance():
         pass
     start()
 
-# Code made by Berkeley Poulsen End
-
 def graph():
-
-    # Code made by Costa Borsas and Omar Start
 
     loc_data_MV = data.loc[(data["Studio"] == "Marvel")]
     dates_rev_MV = loc_data_MV[["Worldwide", "Year"]]
@@ -162,10 +140,6 @@ def graph():
     plt.legend()
     plt.title("Scatter Plot between Worldwide Revenue and Year")
     plt.show()
-
-    # Code made by Costa Borsas End
-
-    # Code made by Chris Higgins Start
 
     loc_data_MV = data.loc[(data["Studio"] == "Marvel")]
     dates_rev_MV = loc_data_MV[["Review", "Year"]]
@@ -182,10 +156,6 @@ def graph():
     plt.show()
 
     start()
-
-    # Code made by Chris Higgins and Omar End
-
-# Code By Berkeley Start
 
 def main_terminal():
     while True:
@@ -214,4 +184,3 @@ elif console == 1:
     AA_terminal()
 else:
     exit()
-
